@@ -1,10 +1,10 @@
 [package]
-name = "teeskins-rs"
+name = "teeskins"
 version = "0.1.0"
 edition = "2021"
 
 include = [
-    "src/**/*",
+    "src/**",
     "Cargo.toml",
     "README.md",
     "LICENSE",
@@ -15,16 +15,14 @@ description = "Wrapper for Teeskins public API"
 repository = "https://github.com/Teeskins/teeskins-rs"
 keywords = [
     "lib",
-    "teeworlds asset",
-    "teeworlds data",
     "teeworlds",
     "teeskins"
 ]
 categories = [
-    "library",
-    "wrapper"
+    "api-bindings"
 ]
 license = "MIT"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -36,7 +34,7 @@ version = "1.0.137"
 features = ["derive"]
 
 [dependencies.ureq]
-version = "*"
+version = "2.5.0"
 features = ["json"]
 
 [dependencies.dotenv]

@@ -40,7 +40,7 @@ impl TeeskinsApi {
     /// Basic usage:
     ///
     /// ```
-    /// use teeskins_rs::api::TeeskinsApi;
+    /// use teeskins::api::TeeskinsApi;
     /// use std::env;
     /// use dotenv::dotenv;
     /// 
@@ -85,8 +85,8 @@ impl TeeskinsApi {
     /// Basic usage:
     ///
     /// ```
-    /// use teeskins_rs::api::TeeskinsApi;
-    /// use teeskins_rs::data::AssetType;
+    /// use teeskins::api::TeeskinsApi;
+    /// use teeskins::data::AssetType;
     /// use std::env;
     /// use dotenv::dotenv;
     /// 
@@ -134,7 +134,7 @@ impl TeeskinsApi {
     /// Basic usage:
     ///
     /// ```
-    /// use teeskins_rs::api::TeeskinsApi;
+    /// use teeskins::api::TeeskinsApi;
     /// use std::env;
     /// use dotenv::dotenv;
     /// 
@@ -172,7 +172,7 @@ impl TeeskinsApi {
     /// Basic usage:
     ///
     /// ```
-    /// use teeskins_rs::api::TeeskinsApi;
+    /// use teeskins::api::TeeskinsApi;
     /// use std::env;
     /// use dotenv::dotenv;
     /// 
@@ -215,8 +215,8 @@ impl TeeskinsApi {
     /// Basic usage:
     ///
     /// ```
-    /// use teeskins_rs::api::TeeskinsApi;
-    /// use teeskins_rs::data::AssetType;
+    /// use teeskins::api::TeeskinsApi;
+    /// use teeskins::data::AssetType;
     /// use std::env;
     /// use dotenv::dotenv;
     /// 

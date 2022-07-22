@@ -11,7 +11,7 @@
 ## Usage example
 
 ```rust
-use teeskins_rs::api::TeeskinsApi;
+use teeskins::api::TeeskinsApi;
 use std::env;
 use dotenv::dotenv;
 
