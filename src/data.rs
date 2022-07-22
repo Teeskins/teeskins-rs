@@ -78,19 +78,30 @@ pub struct AssetsCount {
     pub particles: i32,
     pub entities: i32,
     pub fonts: i32,
+    #[serde(alias = "gridTemplates")]
     pub grid_template: i32
 }
 
 #[derive(Debug, Serialize, Deserialize, Default)]
 pub struct UserData {
     pub rank: i32,
+    #[serde(alias = "totalCount")]
     pub total_count: i32,
-    pub data: AssetsCount
+    #[serde(alias = "assetsCount")]
+    pub assets_count: AssetsCount
 }
 
 #[derive(Debug, Serialize, Deserialize, Default)]
 pub struct Profile {
     pub user: User,
+    #[serde(alias = "uploadData")]
     pub upload_data: UserData,
+    #[serde(alias = "downloadData")]
     pub download_data: UserData
+}
+
+#[derive(Debug, Serialize, Deserialize, Default)]
+pub struct ForDiscord {
+    pub name: String,
+    pub count_uploads: i32
 }

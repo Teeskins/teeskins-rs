@@ -15,3 +15,6 @@ features = ["derive"]
 [dependencies.ureq]
 version = "*"
 features = ["json"]
+
+[dependencies.dotenv]
+version = "0.15.0"
