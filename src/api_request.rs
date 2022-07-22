@@ -1,4 +1,4 @@
-pub fn get<T>(
+pub fn get_json<T>(
     url: &String,
 ) -> Option<T>
 where

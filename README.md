@@ -15,10 +15,6 @@ use teeskins_rs::api::TeeskinsApi;
 use std::env;
 use dotenv::dotenv;
 
-use teeskins_rs::api::TeeskinsApi;
-use std::env;
-use dotenv::dotenv;
-
 fn main() {
     dotenv().ok();
     

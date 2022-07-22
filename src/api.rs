@@ -74,7 +74,7 @@ impl TeeskinsApi {
             id
         );
 
-        api_request::get::<Asset>(&url)
+        api_request::get_json::<Asset>(&url)
     }
 
     /// Get n assets of a specifiq type
@@ -122,10 +122,10 @@ impl TeeskinsApi {
             limit
         );
 
-        api_request::get::<Assets>(&url)
+        api_request::get_json::<Assets>(&url)
     }
 
-    /// This route has been made for discord user, to api_request::get
+    /// This route has been made for discord user, to get
     /// the upload asset amount with a token
     /// In case of error it returns None
     ///
@@ -161,7 +161,7 @@ impl TeeskinsApi {
             token
         );
 
-       api_request::get::<ForDiscord>(&url)
+       api_request::get_json::<ForDiscord>(&url)
     }
 
     /// Returns an user profile with a name
@@ -204,6 +204,6 @@ impl TeeskinsApi {
             name
         );
 
-       api_request::get::<Profile>(&url)
+       api_request::get_json::<Profile>(&url)
     }
 }
