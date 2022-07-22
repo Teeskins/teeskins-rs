@@ -1,3 +1,5 @@
+use std::fmt;
+
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Default)]
@@ -18,6 +20,35 @@ pub struct Asset {
 }
 
 pub type Assets = Vec<Asset>;
+
+#[derive(Debug)]
+pub enum AssetType {
+    SKIN,
+    MAPRES,
+    GAMESKIN,
+    EMOTICON,
+    ENTITY,
+    CURSOR,
+    PARTICLE,
+    FONT,
+    GRIDTEMPLATE
+}
+
+impl fmt::Display for AssetType {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            AssetType::SKIN => write!(f, "skin"),
+            AssetType::MAPRES => write!(f, "mapres"),
+            AssetType::GAMESKIN => write!(f, "gameskin"),
+            AssetType::EMOTICON => write!(f, "emoticon"),
+            AssetType::ENTITY => write!(f, "entity"),
+            AssetType::CURSOR => write!(f, "cursor"),
+            AssetType::PARTICLE => write!(f, "particle"),
+            AssetType::FONT => write!(f, "font"),
+            AssetType::GRIDTEMPLATE => write!(f, "gridtemplate")
+        }
+    }
+}
 
 #[derive(Debug, Serialize, Deserialize, Default)]
 pub struct Uploader {

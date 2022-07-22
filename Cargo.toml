@@ -8,9 +8,6 @@ edition = "2021"
 [dependencies.serde_json]
 version = "1"
 
-[dependencies.dotenv]
-version = "0.15.0"
-
 [dependencies.serde]
 version = "1.0.137"
 features = ["derive"]

@@ -16,3 +16,7 @@ Cargo.lock
 
 # Environment variables
 .env
+
+# Debugging
+main.rs
+test.rs
