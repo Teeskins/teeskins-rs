@@ -206,4 +206,42 @@ impl TeeskinsApi {
 
        api_request::get_json::<Profile>(&url)
     }
+
+    /// Returns a random asset by a specific asset type
+    /// In case of error it returns None
+    ///
+    /// # Examples
+    ///
+    /// Basic usage:
+    ///
+    /// ```
+    /// use teeskins_rs::api::TeeskinsApi;
+    /// use teeskins_rs::data::AssetType;
+    /// use std::env;
+    /// use dotenv::dotenv;
+    /// 
+    /// dotenv().ok();
+    /// 
+    /// let host = env::var("HOST").unwrap();
+    /// 
+    /// let api = TeeskinsApi::new(
+    ///     "".to_string(),
+    ///     host
+    /// );
+    /// 
+    /// let asset = api.get_random_by_type(AssetType::MAPRES);
+    /// ```
+
+    pub fn get_random_by_type(
+        &self,
+        category: AssetType
+    ) -> Option<Asset> {
+        let url = format!(
+            "{}/api/random/{}",
+            self.host,
+            category
+        );
+
+       api_request::get_json::<Asset>(&url)
+    }
 }
